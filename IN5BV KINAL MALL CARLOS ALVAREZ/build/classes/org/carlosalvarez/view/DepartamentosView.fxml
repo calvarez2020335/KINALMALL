@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1044.0" stylesheets="@../resource/css/estiloAdministracion.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosalvarez.controller.DepartamentosController">
+   <children>
+      <Pane layoutY="-14.0" prefHeight="616.0" prefWidth="226.0" style="-fx-background-color: #260A4C;">
+         <children>
+            <Pane layoutX="44.0" layoutY="14.0" prefHeight="161.0" prefWidth="139.0" style="-fx-background-color: #DDD9E3; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <VBox alignment="CENTER" layoutY="-31.0" prefHeight="222.0" prefWidth="139.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="203.0" text="Departamentos" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="94.0" fitWidth="101.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Departamentos.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox layoutX="36.0" layoutY="259.0" prefHeight="230.0" prefWidth="155.0">
+               <children>
+                  <Button fx:id="btntNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="54.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="59.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editar" prefHeight="59.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#reporte" prefHeight="58.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="44.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane layoutX="760.0" layoutY="-73.0" prefHeight="310.0" prefWidth="295.0" rotate="-13.1" style="-fx-background-color: #6E5B87; -fx-background-radius: 0 0 0 1000; -fx-opacity: 0.1;" />
+      <Pane layoutX="227.0" layoutY="414.0" prefHeight="354.0" prefWidth="268.0" rotate="-179.8" style="-fx-background-color: #6E5B87; -fx-background-radius: 0 0 0 1000; -fx-opacity: 0.1;" />
+      <AnchorPane layoutX="228.0" layoutY="-6.0" prefHeight="598.0" prefWidth="816.0">
+         <children>
+            <TableView fx:id="tblDepartamentos" layoutX="233.0" layoutY="226.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="334.0" prefWidth="307.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="56.0" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="250.40001220703124" text="Nombre" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="44.0" fitWidth="47.0" layoutX="759.0" layoutY="538.0" onMouseClicked="#mostrarVistaMenuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/flecha-de-regreso.png" />
+               </image>
+            </ImageView>
+            <GridPane layoutX="213.0" layoutY="53.0" prefHeight="107.0" prefWidth="346.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.60003662109375" minWidth="0.79998779296875" prefWidth="0.79998779296875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.20001220703125" minWidth="10.0" prefWidth="231.20001220703125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="ID:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nombre:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtId" disable="true" editable="false" prefHeight="26.0" prefWidth="376.0" GridPane.columnIndex="2" />
+                  <TextField fx:id="txtNombre" editable="false" prefHeight="26.0" prefWidth="376.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

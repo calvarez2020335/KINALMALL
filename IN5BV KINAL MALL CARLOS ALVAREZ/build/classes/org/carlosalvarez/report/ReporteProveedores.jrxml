@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteProveedores" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="15b69424-9dac-43ba-b02b-f5ce8f71a1ed">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Locales" uuid="b4063cb8-1475-4dab-a947-70fb453bd08e">
+		<queryString language="SQL">
+			<![CDATA[Select * from proveedores]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nit" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="servicioPrestado" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="telefono" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="direccion" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="saldoFavor" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="saldoContra" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<group name="id">
+			<groupExpression><![CDATA[$F{id}]]></groupExpression>
+		</group>
+		<group name="nit">
+			<groupExpression><![CDATA[$F{nit}]]></groupExpression>
+		</group>
+		<group name="servicioPrestado">
+			<groupExpression><![CDATA[$F{servicioPrestado}]]></groupExpression>
+		</group>
+		<group name="telefono">
+			<groupExpression><![CDATA[$F{telefono}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="Proveedores" uuid="c51c13cd-1a11-4e9f-87a6-7bc7d76b4737">
+		<queryString language="SQL">
+			<![CDATA[select * from proveedores]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nit" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="servicioPrestado" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="telefono" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="direccion" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="saldoFavor" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="saldoContra" class="java.math.BigDecimal">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<queryString>
+		<![CDATA[select * from proveedores]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="servicioPrestado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoFavor" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="saldoContra" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="236" y="0" width="100" height="20" uuid="af55e70d-a2e1-4ad3-9c68-36571c4d9a12"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="29" width="233" height="20" uuid="20875f50-83b8-43e4-9f88-51e10651e565"/>
+				<text><![CDATA[6A Avenida 13-54, Cdad. de Guatemala 01007]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="472" y="57" width="100" height="20" uuid="5090a561-b53f-45f2-aa27-bb02b17abd2a"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="49" width="100" height="20" uuid="20711cae-11e6-4078-b7f9-7380fe9ff470"/>
+				<text><![CDATA[Teléfono: 2216 0000]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="79" uuid="8a25292e-b9d5-4980-ab53-63d55856273b"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="59" uuid="36970bb5-e277-407b-a823-009b029495d7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[REPORTE PROVEEDORES]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="212" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table" style="table" x="17" y="30" width="537" height="140" uuid="96ed25c0-0168-473b-8749-498028343c6b"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Proveedores" uuid="e32fa0de-4d73-4acf-8ce7-07c17248fc04">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="63" uuid="1e85cf50-1701-4294-922f-6a4499fcf6b3">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="7" y="0" width="49" height="30" uuid="cbeea694-1983-4309-816f-5bc8a1ad554c"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="2" y="0" width="47" height="20" uuid="0a198469-ffad-4cde-afd1-9014684bb744"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="62" uuid="b9da3a8f-246c-4957-a73b-3b0c2fd3e061">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="61" height="30" uuid="ce0c505e-f040-4352-af6f-e47ee1073549"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[NIT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="61" height="20" uuid="4427f8eb-764e-480a-a47b-e5c7902412e5"/>
+								<textFieldExpression><![CDATA[$F{nit}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="52243796-1434-485e-804b-db17e567ceac">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="084edce4-ab6e-458a-8c69-eb2f0dc5a1c9"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Servicio Prestado]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="0dfee6d1-dee5-49fc-a480-69492294b386"/>
+								<textFieldExpression><![CDATA[$F{servicioPrestado}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="69" uuid="05e5e209-fe2f-4266-852e-667242adc4c9">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="66" height="30" uuid="5f9579da-8fe3-40b7-aa23-74254268a72a"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Telefono]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="66" height="20" uuid="559fdfe3-e9a7-4c7b-b68e-24a5d012f149"/>
+								<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="db5598d5-fe60-4c07-8436-63276cf0943e">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="dc62e7a0-ed77-47b6-a4d3-ba5c99fd32e7"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Dirección]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="61a4d69a-57b2-41cc-9081-fa8acceac715"/>
+								<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f264b24d-56b5-4adf-a81f-e516f4f13df8">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="6d7b5ca3-9d5f-455b-ad01-7815a5e51582"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Saldo a favor]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="21ebd1ef-1ca5-42c8-9a62-8ebd1fede639"/>
+								<textFieldExpression><![CDATA[$F{saldoFavor}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b8ba010b-348c-4472-97a6-8610421570d6">
+						<jr:columnHeader style="table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="3ace6a0a-9b68-4bf6-9a74-8300cb35dd12"/>
+								<text><![CDATA[Saldo en Contra]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="15f68db8-5f40-45cb-ad13-a6ea9a14e7c8"/>
+								<textFieldExpression><![CDATA[$F{saldoContra}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="14" width="167" height="40" uuid="4b16eeb5-cef0-43d3-aca5-e1dd96c5f9e9"/>
+				<text><![CDATA[Carlos Adolfo Alvarez Crúz
+calvarez-2020335@kinal.edu.gt
+IN5BV]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="524" y="34" width="100" height="20" uuid="82e123a5-102f-4c66-8b57-5ae28a29ee26"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="0" width="100" height="20" uuid="4e80f7e4-4b69-45e5-9ac9-c62b1dd79f91"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

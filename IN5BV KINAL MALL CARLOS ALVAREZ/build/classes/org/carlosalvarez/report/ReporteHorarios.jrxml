@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteHorarios" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isSummaryNewPage="true" uuid="108b794f-3075-4ee8-b181-283d54609eff">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Horarios" uuid="d9d0085d-e381-42b5-8c90-67e5d5a790f4">
+		<queryString language="SQL">
+			<![CDATA[select * from Horarios]]>
+		</queryString>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="horarioEntrada" class="java.sql.Time">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="horarioSalida" class="java.sql.Time">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="lunes" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="martes" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="miercoles" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="jueves" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="viernes" class="java.lang.Boolean">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="LOGO_HEADER" class="java.io.InputStream"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM Horarios]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioEntrada" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioSalida" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="472" y="59" width="100" height="20" uuid="7c9919eb-d3c7-4983-be82-55b41c8744bb"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="0" width="100" height="20" uuid="4595281e-0d94-4316-97d5-375e4fff848a"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="29" width="233" height="20" uuid="42cc4150-358f-4997-b67f-0a5dd227e07d"/>
+				<text><![CDATA[6A Avenida 13-54, Cdad. de Guatemala 01007]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="79" uuid="ad2f2135-9d5a-4ade-b156-9bf6f0b21388"/>
+				<imageExpression><![CDATA[$P{LOGO_HEADER}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="236" y="49" width="100" height="20" uuid="2b7c4ee3-5dc4-441d-8a7b-630c31cd58ba"/>
+				<text><![CDATA[Teléfono: 2216 0000]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="174" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="80" uuid="6be26396-3721-4b15-b086-006adf3e7dc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[REPORTE HORARIOS]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="145" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 1" style="table 1" x="43" y="5" width="440" height="140" uuid="cd8cda94-4e70-49ac-8a0b-66a181238fb2"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Horarios" uuid="64482def-5d69-4d3d-9ac8-740887a88aa9">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="55" uuid="a500aeef-b6fb-4296-8c57-b206f1e5719f">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="d854a2fa-eb7a-4fc7-be76-16d1283629ad"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[ID]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="3c2ec3a3-1612-42f3-938b-a835579bc527"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="b4d26fbb-86ad-4b05-8ca8-8a5ee800d2be">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="ba937926-1624-49e0-bfa0-352f316ece6c"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Horario entrada]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField pattern="h.mm a">
+								<reportElement x="0" y="0" width="90" height="20" uuid="79336d68-07f9-4b0a-a11b-915b6cb9d626"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{horarioEntrada}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="f0334698-651a-4ce5-8c31-120b6c6f90a5">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="713ae01a-d618-41e3-b3f7-102a273fed7e"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Horario Salida]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField pattern="h.mm a">
+								<reportElement x="0" y="0" width="90" height="20" uuid="51317be9-cf5d-4932-b2cf-b64173cb91f5"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{horarioSalida}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="5b85115a-6c03-4402-affd-f21bc38f7080">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="15c73b59-b806-4b70-a570-3f4e42328c7a"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Lunes]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="1b00a4d9-0f63-4839-b241-a33dddd12e0f"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{lunes} ? "SI" : "NO"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="18a902e2-d1b8-425d-b197-e184785d679b">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="e834cda0-d958-493d-8b2f-b892be5b5776"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Martes]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="8f309276-72e5-4549-9c1a-f0cbc7891dd0"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{martes}  ? "SI" : "NO"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="b6f53458-9125-42d5-8676-dcfa4e058c8b">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="f3c874b4-c59f-4286-b174-8ccccbbf6052"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Miercoles]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="46014e15-6ffe-4e89-a668-2efec01d0962"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{miercoles}  ? "SI" : "NO"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="53" uuid="966497af-50f2-4d34-ab65-8363548ab56e">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="fa057898-9a56-481b-868d-9bf4572b759e"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Jueves]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="64565d6a-332b-4b2b-87b8-70b09099b567"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{jueves}  ? "SI" : "NO"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="7d32602f-06ef-4ec6-a553-f69a5c73f3ee">
+						<jr:columnHeader style="table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="c28bba06-0673-4b10-bc12-84b08d098801"/>
+								<textElement textAlignment="Center"/>
+								<text><![CDATA[Viernes]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table 1_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="99e45bcb-119c-41b6-b708-c3d4cbb9ff67"/>
+								<textElement textAlignment="Center"/>
+								<textFieldExpression><![CDATA[$F{viernes}  ? "SI" : "NO"]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="14" width="167" height="40" uuid="a26949f4-4922-44fe-97c9-541ef513060b"/>
+				<text><![CDATA[Carlos Adolfo Alvarez Crúz
+calvarez-2020335@kinal.edu.gt
+IN5BV]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="515" y="34" width="100" height="20" uuid="e8acdfc8-4b62-4b8b-9b43-6a70f59b2027"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="236" y="0" width="100" height="20" uuid="27623296-8678-4c4a-b358-c21f7903a8d8"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KINAL MALL]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

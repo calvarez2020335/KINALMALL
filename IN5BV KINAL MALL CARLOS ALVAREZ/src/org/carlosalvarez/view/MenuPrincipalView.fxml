@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="1044.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosalvarez.controller.MenuPrincipalContoller">
+   <children>
+      <ImageView fitHeight="602.0" fitWidth="1049.0" layoutX="-5.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/images/Fondo%20y%20logo.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="30.0" layoutY="1.0" prefHeight="30.0" prefWidth="188.0" style="-fx-background-radius: 20 20 20 20; -fx-background-color: #F9AF23;">
+        <menus>
+          <Menu mnemonicParsing="false" text="Módulos">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarVistaEmpleados" text="Empleados">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/empleados.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaProveedores" text="Proveedores">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/inventario.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#mostrarVistaClientes" text="Clientes">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/Clientes.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem fx:id="menuAdministracion" mnemonicParsing="false" onAction="#mostrarVistaAdministracion" text="Administración">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/organization.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+            </items>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/modulo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#mostrarVistaAutor" text="Autor">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/autor2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+            </items>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resource/images/informacion.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Button layoutY="552.0" mnemonicParsing="false" onAction="#CerrarSesion" prefHeight="25.0" prefWidth="112.0" style="-fx-background-color: #F9AF23; -fx-background-radius: 50 50 50 50;" text="Cerrar Sesión">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

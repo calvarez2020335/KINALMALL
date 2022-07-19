@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1044.0" stylesheets="@../resource/css/estiloAdministracion.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosalvarez.controller.AutorController">
+   <children>
+      <Pane layoutY="-14.0" prefHeight="610.0" prefWidth="226.0" style="-fx-background-color: #260A4C;">
+         <children>
+            <Pane layoutX="44.0" layoutY="14.0" prefHeight="161.0" prefWidth="139.0" style="-fx-background-color: #DDD9E3; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <VBox alignment="CENTER" layoutY="-31.0" prefHeight="207.0" prefWidth="139.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="203.0" text="        Autor" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="108.0" fitWidth="94.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/creador.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <ImageView fitHeight="345.0" fitWidth="214.0" layoutX="6.0" layoutY="230.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/Foto.jpeg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="771.0" layoutY="-115.0" prefHeight="310.0" prefWidth="295.0" rotate="-13.1" style="-fx-background-color: #6E5B87; -fx-background-radius: 0 0 0 1000; -fx-opacity: 0.1;" />
+      <Pane layoutX="229.0" layoutY="371.0" prefHeight="333.0" prefWidth="268.0" rotate="-179.8" style="-fx-background-color: #6E5B87; -fx-background-radius: 0 0 0 1000; -fx-opacity: 0.1;" />
+      <AnchorPane layoutX="235.0" layoutY="-3.0" prefHeight="598.0" prefWidth="816.0">
+         <children>
+            <Label layoutX="143.0" layoutY="42.0" text="Nombre:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="116.0" prefWidth="97.0" text="Carné:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="37.0" layoutX="769.0" layoutY="554.0" onMouseClicked="#mostrarVistaMenuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/flecha-de-regreso.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="138.0" layoutY="203.0" prefWidth="97.0" text="Carrera:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="138.0" layoutY="299.0" prefHeight="36.0" prefWidth="188.0" text="Codigo Tecnico:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="383.0" prefWidth="97.0" text="Edad:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="42.0" text="Carlos Adolfo Alvarez Crúz">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="116.0" text="2020335">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="203.0" text="Perito en computación">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="299.0" text="IN5BV">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="380.0" layoutY="383.0" text="17 Años">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="142.0" layoutY="459.0" prefWidth="97.0" text="Sección:">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="384.0" layoutY="459.0" prefWidth="97.0" text="B">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

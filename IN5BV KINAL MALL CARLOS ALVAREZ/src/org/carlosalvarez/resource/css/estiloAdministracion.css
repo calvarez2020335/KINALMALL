@@ -1,0 +1,17 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 may 2021, 15:11:54
+    Author     : Carlos Adolfo Alvarez Crúz
+*/
+
+.butttons {
+    -fx-background-color: #990099;
+}
+
+.butttons:hover {
+   -fx-background-color: #EB8C24;
+}

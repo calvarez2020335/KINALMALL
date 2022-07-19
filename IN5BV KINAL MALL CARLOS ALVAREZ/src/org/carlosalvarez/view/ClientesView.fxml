@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="1044.0" stylesheets="@../resource/css/estiloAdministracion.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosalvarez.controller.ClientesController">
+   <children>
+      <Pane layoutY="-14.0" prefHeight="605.0" prefWidth="222.0" style="-fx-background-color: #260A4C;">
+         <children>
+            <Pane layoutX="44.0" layoutY="14.0" prefHeight="161.0" prefWidth="139.0" style="-fx-background-color: #DDD9E3; -fx-background-radius: 0 0 50 50;">
+               <children>
+                  <VBox alignment="CENTER" layoutY="-31.0" prefHeight="207.0" prefWidth="139.0">
+                     <children>
+                        <Label prefHeight="26.0" prefWidth="203.0" text="      Clientes" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="108.0" fitWidth="94.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/inquilino.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <VBox layoutX="30.0" layoutY="231.0" prefHeight="230.0" prefWidth="155.0">
+               <children>
+                  <Button fx:id="btntNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="54.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Nuevo" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="59.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editar" prefHeight="59.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Editar" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" layoutX="10.0" layoutY="52.0" mnemonicParsing="false" onAction="#reporte" prefHeight="58.0" prefWidth="155.0" style="-fx-background-radius: 20 0 20 0;" styleClass="butttons" text="Reporte" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="44.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resource/images/reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Button layoutX="44.0" layoutY="557.0" mnemonicParsing="false" onAction="#mostrarCuentasPorCobrar" text="Ir a Cuentas por cobrar" />
+            <ImageView fitHeight="54.0" fitWidth="62.0" layoutX="78.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/pagar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="224.0" layoutY="379.0" prefHeight="310.0" prefWidth="295.0" rotate="-179.8" style="-fx-background-color: #6E5B87; -fx-background-radius: 0 0 0 1000; -fx-opacity: 0.1;" />
+      <Pane layoutX="783.0" layoutY="-125.0" prefHeight="310.0" prefWidth="295.0" style="-fx-background-color: #6E5B87; -fx-background-radius: 0 0 0 1000; -fx-opacity: 0.1;" />
+      <AnchorPane layoutX="220.0" layoutY="-1.0" prefHeight="563.0" prefWidth="104.0">
+         <children>
+            <TableView fx:id="tblClientes" layoutX="4.0" layoutY="209.0" onKeyReleased="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="332.0" prefWidth="811.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="33.066619873046875" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="138.13330078125" text="Nombre" />
+                  <TableColumn fx:id="colcolApellidos" prefWidth="165.86669921875" text="Apellidos" />
+                  <TableColumn fx:id="colTelefono" prefWidth="61.066650390625" text="Telefono" />
+                  <TableColumn fx:id="colDireccion" prefWidth="164.7999267578125" text="Dirección" />
+                  <TableColumn fx:id="colEmail" minWidth="0.0" prefWidth="156.00006103515625" text="Email" />
+                  <TableColumn fx:id="colIdTipoCliente" prefWidth="85.59991455078125" text="TipoCliente" />
+              </columns>
+            </TableView>
+            <ImageView fitHeight="28.0" fitWidth="40.0" layoutX="775.0" layoutY="542.0" onMouseClicked="#mostrarVistaMenuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/images/flecha-de-regreso.png" />
+               </image>
+            </ImageView>
+            <GridPane layoutX="78.0" layoutY="10.0" prefHeight="174.0" prefWidth="653.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.2666015625" minWidth="10.0" prefWidth="182.60003662109375" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.60003662109375" minWidth="10.0" prefWidth="64.19996337890626" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.26666259765625" minWidth="10.0" prefWidth="106.39995117187499" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.00006103515625" minWidth="10.0" prefWidth="209.60004882812495" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Nombre:" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNombre" editable="false" prefHeight="26.0" prefWidth="246.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Apellidos:" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Dirección:" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtApellidos" editable="false" prefHeight="26.0" prefWidth="247.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="txtDireccion" editable="false" prefHeight="26.0" prefWidth="330.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label text="Telefono:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTelefono" editable="false" prefHeight="26.0" prefWidth="211.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label text="Email:" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" editable="false" prefHeight="26.0" prefWidth="212.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label text="TipoCliente:" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ComboBox id="tipo-cliente" fx:id="cmbTipoCliente" disable="true" prefHeight="26.0" prefWidth="235.0" stylesheets="@../resource/css/estilosKinalMall.css" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                  <Label text="                                ID:" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtId" disable="true" editable="false" prefHeight="26.0" prefWidth="65.0" GridPane.columnIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

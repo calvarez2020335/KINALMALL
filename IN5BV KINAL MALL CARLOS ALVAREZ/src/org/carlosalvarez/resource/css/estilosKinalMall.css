@@ -1,0 +1,30 @@
+/* 
+    Created on : 13 may 2021, 15:22:21
+    Author     : Carlos Adolfo Alvarez Crúz
+*/
+
+.menu-bar{
+    -fx-background-color: white;
+    -fx-opacity: 0.9;
+}
+
+.menu-bar .label{
+    -fx-text-fill: black;
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.menu-bar .menu-button:hover{
+    
+    -fx-background-color: #cccccc
+    
+}
+
+.menu-item:hover{
+    -fx-background-color:  #F9AF23;
+    -fx-opacity: 0.7;
+}
+
+.Buttons{
+    -fx-background-color:  #F9AF23;
+}
